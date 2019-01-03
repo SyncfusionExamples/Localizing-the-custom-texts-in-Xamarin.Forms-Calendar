@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:LocalizingCustomtextsfromPCL"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfCalendar.XForms;assembly=Syncfusion.SfCalendar.XForms"
+             x:Class="LocalizingCustomtextsfromPCL.MainPage">
+
+    <ContentPage.Content>
+        <syncfusion:SfCalendar ShowHeader="True" ShowInlineEvents="True" x:Name="calendar" VerticalOptions="FillAndExpand" DataSource="{Binding CalendarInlineEvents}">
+            <syncfusion:SfCalendar.Behaviors>
+                <local:CalendarBehavior/>
+            </syncfusion:SfCalendar.Behaviors>
+            <syncfusion:SfCalendar.BindingContext>
+                <local:ViewModel/>
+            </syncfusion:SfCalendar.BindingContext>
+            </syncfusion:SfCalendar>
+    </ContentPage.Content>
+
+</ContentPage>
