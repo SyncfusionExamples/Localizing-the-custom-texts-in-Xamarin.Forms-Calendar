@@ -16,16 +16,11 @@ namespace LocalizingCustomtextsfromPCL
 		{
 			InitializeComponent();
 
+            // set Calendar Resource manager
             CalendarResourceManager.Manager = new System.Resources.ResourceManager("LocalizingCustomtextsfromPCL.Resources.Syncfusion.SfCalendar.XForms", GetType().GetTypeInfo().Assembly);
+            //Set Locale for Calendar
             CultureInfo.CurrentUICulture = new CultureInfo("pt");
             calendar.Locale = new System.Globalization.CultureInfo("pt-PT");
-
-            calendar.MonthViewSettings = new MonthViewSettings()
-            {
-                SelectedDayTextColor = Color.White,
-                TodayTextColor = Color.FromHex("#007CEE")
-
-            };
 
             // Creating Events in SfCalendar
             CalendarEventCollection calendarInlineEvents = new CalendarEventCollection();
@@ -38,6 +33,7 @@ namespace LocalizingCustomtextsfromPCL
                 IsAllDay = true,
             });
 
+            //Add collection of events as source of SfCalendar
             calendar.DataSource = calendarInlineEvents;
         }
 	}
