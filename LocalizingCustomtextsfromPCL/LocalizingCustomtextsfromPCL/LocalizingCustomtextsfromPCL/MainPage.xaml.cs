@@ -15,26 +15,6 @@ namespace LocalizingCustomtextsfromPCL
 		public MainPage()
 		{
 			InitializeComponent();
-
-            // set Calendar Resource manager
-            CalendarResourceManager.Manager = new System.Resources.ResourceManager("LocalizingCustomtextsfromPCL.Resources.Syncfusion.SfCalendar.XForms", GetType().GetTypeInfo().Assembly);
-            //Set Locale for Calendar
-            CultureInfo.CurrentUICulture = new CultureInfo("pt");
-            calendar.Locale = new System.Globalization.CultureInfo("pt-PT");
-
-            // Creating Events in SfCalendar
-            CalendarEventCollection calendarInlineEvents = new CalendarEventCollection();
-
-            calendarInlineEvents.Add(new CalendarInlineEvent()
-            {
-                Subject = "Goto Meeting",
-                StartTime = DateTime.Today.AddHours(10),
-                EndTime = DateTime.Today.AddHours(12),
-                IsAllDay = true,
-            });
-
-            //Add collection of events as source of SfCalendar
-            calendar.DataSource = calendarInlineEvents;
         }
 	}
 }
