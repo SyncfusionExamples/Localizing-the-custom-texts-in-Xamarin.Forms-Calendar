@@ -20,8 +20,6 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>MinimumOSVersion</key>
-	<string>11.3</string>
 	<key>CFBundleDisplayName</key>
 	<string>LocalizingCustomtextsfromPCL</string>
 	<key>CFBundleIdentifier</key>
@@ -50,5 +48,7 @@
 	<string>LaunchScreen</string>
 	<key>CFBundleName</key>
 	<string>LocalizingCustomtextsfromPCL</string>
+	<key>MinimumOSVersion</key>
+	<string>14.1</string>
 </dict>
 </plist>
